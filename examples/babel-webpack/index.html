@@ -1,7 +1,122 @@
-<html>
-  <body>
-    <h1>Sign up</h1>
-    <div id="app"></div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+        body {
+            background-color: #252F3E;
+            font-family: 'Raleway', sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: black;
+        }
+        
+        #container {
+            width: 55%;
+            height: 500px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        
+        label {
+            color: black;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: rgba(37, 47, 62, 0.1);
+            width: 300px;
+            border-color: rgb(37, 47, 62);
+        }
+        
+        input[type="submit"] {
+            padding: 17px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FF9900;
+            color: #fff;
+            cursor: pointer;
+            font-size: medium;
+        }
+        
+        #bg-img {
+            position: fixed;
+            bottom: 10%;
+            z-index: -1;
+        }
+        
+        #upload-photo {
+            display: flex;
+            justify-content: space-between;
+            width: 330px;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            form {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        #upload-photo-svg {
+            margin-right: 10px;
+        }
+        
+        #camera {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="sign-in"></div>
+        <div id="register"></div>
+    </div>
+    <div id="bg-img">
+        <svg width="446" height="99" viewBox="0 0 446 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M402.383 44.5882C353.682 80.1036 282.926 98.9574 222.087 98.9574C136.824 98.9574 59.9981 67.8267 1.97174 16.0882C-2.61708 11.9959 1.52766 6.44206 7.00463 9.65745C69.7678 45.6113 147.186 67.3882 227.268 67.3882C281.297 67.3882 340.656 56.2805 395.278 33.4805C403.419 29.8267 410.376 38.7421 402.383 44.5882Z" fill="#FF9900"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M422.663 21.7883C416.445 13.896 381.511 17.9883 365.672 19.8883C360.936 20.4729 360.195 16.3806 364.488 13.3113C392.317 -5.98097 438.057 -0.427129 443.386 6.00364C448.715 12.5806 441.906 57.7421 415.853 79.3729C411.857 82.7344 408.008 80.9806 409.784 76.596C415.705 62.1267 428.88 29.5344 422.663 21.7883Z" fill="#FF9900"/>
+      </svg>
+    </div>
     <script src="dist/main.bundle.js"></script>
-  </body>
+</body>
+
 </html>
