@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Serverless Face Authentication</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
         body {
@@ -27,10 +27,13 @@
         }
         
         #container {
-            width: 55%;
-            height: 500px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #sign-in {
+            margin-right: 70px;
         }
         
         form {
@@ -39,8 +42,9 @@
             align-items: center;
             justify-content: center;
             width: 400px;
-            padding: 20px;
-            border-radius: 10px;
+            min-height: 500px;
+            padding: 10px;
+            border-radius: 40px;
             background-color: #fff;
         }
         
@@ -53,9 +57,9 @@
         input[type="password"],
         input[type="file"] {
             padding: 14px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border: 1px solid;
-            border-radius: 5px;
+            border-radius: 10px;
             background-color: rgba(37, 47, 62, 0.1);
             width: 300px;
             border-color: rgb(37, 47, 62);
@@ -63,6 +67,7 @@
         
         input[type="submit"] {
             padding: 17px;
+            margin-top: 5px;
             border: none;
             border-radius: 5px;
             background-color: #FF9900;
@@ -73,18 +78,21 @@
         
         #bg-img {
             position: fixed;
-            bottom: 10%;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: -1;
         }
         
-        #upload-photo {
+        #upload-photo-container {
             display: flex;
             justify-content: space-between;
             width: 330px;
         }
         
-        @media only screen and (max-width: 768px) {
-            .container {
+        @media only screen and (max-width: 1000px) {
+            #container {
+                display: flex;
                 flex-direction: column;
                 align-items: center;
             }
@@ -100,6 +108,12 @@
         
         #camera {
             margin-bottom: 10px;
+        }
+        
+        .icon {
+            padding-left: 25px;
+            background: url("./camera.svg") no-repeat left;
+            background-size: 20px;
         }
     </style>
 </head>
